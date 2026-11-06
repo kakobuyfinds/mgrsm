@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#223b43">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>DgoBuy spreadsheet: guia de tamanhos, QC e compras</title>
+  <meta name="description" content="Explore o tema DgoBuy spreadsheet em português: categorias de moda, medidas, fotos QC e custos a verificar antes de comprar. Guia independente.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="hipobuyfind.com">
+  <meta property="og:title" content="DgoBuy spreadsheet: do primeiro achado à escolha informada">
+  <meta property="og:description" content="Um guia independente para comparar roupa, sapatilhas e acessórios com atenção às medidas, às fotografias e ao custo total.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+  <meta property="og:image:alt" content="Sapatilha Nike vermelha sobre fundo vermelho">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DgoBuy spreadsheet — guia em português">
+  <meta name="twitter:description" content="Categorias de moda e critérios práticos para comparar tamanhos, fotografias e despesas de envio.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="dns-prefetch" href="//media.gucci.com">
+  <!-- index.html
+    Página editorial independente.
+    Palavra-chave principal: DgoBuy spreadsheet.
+    Temas secundários: guia DgoBuy em português; DgoBuy finds;
+    tamanhos e medidas DgoBuy; fotos QC DgoBuy; custos de envio DgoBuy.
+    Pesquisa temática realizada em resultados de pesquisa disponíveis.
+    Não foi possível confirmar a ordem da primeira página do Google.
+    Não são reproduzidas promessas comerciais, avaliações ou preços de terceiros.
+    O domínio de publicação não foi fornecido; canonical e og:url foram omitidos
+    para evitar atribuir esta página ao endereço de destino dos botões.
+  -->
+  <style>
+    :root {
+      --paper: #f5f2e9;
+      --white: #fffef9;
+      --ink: #223b43;
+      --muted: #52656a;
+      --line: #d7ded8;
+      --lime: #dceba5;
+      --clay: #b94c35;
+      --soft: #e8eeea;
+      --radius: 18px;
+      --width: 1180px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-underline-offset: 4px; }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--clay);
+      outline-offset: 5px;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      background: var(--soft);
+    }
+    h1, h2, h3, p, figure { margin: 0; }
+    h1, h2, h3 { line-height: 1.12; text-wrap: balance; }
+    h1 { font-size: clamp(2.5rem, 5.7vw, 5.3rem); letter-spacing: -.065em; }
+    h2 { font-size: clamp(1.85rem, 3.4vw, 3rem); letter-spacing: -.045em; }
+    h3 { font-size: 1.3rem; letter-spacing: -.025em; }
+    p + p { margin-top: 1rem; }
+    .wrap { width: min(var(--width), calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow {
+      display: block;
+      margin-bottom: 15px;
+      font-size: .73rem;
+      font-weight: 750;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .muted { color: var(--muted); }
+    .topline {
+      background: var(--ink);
+      color: var(--white);
+      text-align: center;
+      padding: 9px 16px;
+      font-size: .76rem;
+      letter-spacing: .035em;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      padding-block: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .logo {
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      font-weight: 850;
+      letter-spacing: -.05em;
+      text-decoration: none;
+    }
+    .logo::before { content: "◒"; margin-right: 9px; color: var(--clay); }
+    .header-right { display: flex; align-items: center; gap: 24px; font-size: .85rem; }
+    .language {
+      border: 1px solid var(--line);
+      padding: 4px 10px;
+      border-radius: 30px;
+      font-size: .75rem;
+    }
+    .category-section { padding-block: 27px 34px; }
+    .category-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+      font-size: .78rem;
+    }
+    .category-label strong { font-weight: 750; }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .categories a {
+      min-height: 68px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 12px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background .15s, border-color .15s;
+    }
+    .categories a:hover { background: var(--lime); border-color: #9aac70; }
+    .categories strong { font-size: .84rem; line-height: 1.25; }
+    .categories small { margin-top: 4px; font-size: .71rem; color: var(--muted); }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--white);
+    }
+    .hero-copy { padding: clamp(25px, 4vw, 54px); }
+    .hero-copy h1 span { color: var(--clay); }
+    .hero-copy > p {
+      max-width: 49ch;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 49px;
+      padding: 12px 23px;
+      background: var(--ink);
+      color: white;
+      border: 1px solid var(--ink);
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: .87rem;
+      font-weight: 700;
+    }
+    .button:hover { background: #35545e; }
+    .hero-copy .button { margin-top: 28px; }
+    .destination { display: block; margin-top: 11px; font-size: .72rem; color: var(--muted); }
+    .hero-photo { background: #c52b32; display: flex; flex-direction: column; }
+    .hero-photo img { width: 100%; flex: 1; object-fit: cover; aspect-ratio: 1 / 1; }
+    .hero-photo figcaption {
+      padding: 14px 20px;
+      color: #fff;
+      background: #942e31;
+      font-size: .75rem;
+      line-height: 1.45;
+    }
+    .answer-strip {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 25px;
+      padding: 29px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .answer-strip strong { font-size: .77rem; text-transform: uppercase; letter-spacing: .08em; }
+    .answer-strip p { max-width: 83ch; }
+    .section { padding-block: 67px; border-bottom: 1px solid var(--line); }
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr .78fr;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+    .section-heading > p { color: var(--muted); max-width: 48ch; }
+    .guide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .guide-card {
+      padding: 26px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+    .number {
+      display: inline-flex;
+      width: 38px;
+      height: 38px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 26px;
+      border-radius: 50%;
+      background: var(--lime);
+      font-size: .8rem;
+      font-weight: 800;
+    }
+    .guide-card p { margin-top: 15px; color: var(--muted); font-size: .93rem; }
+    .compare {
+      margin-top: 25px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow-x: auto;
+      background: var(--white);
+    }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: .88rem; }
+    caption { text-align: left; padding: 20px; font-weight: 750; }
+    th, td { padding: 16px 20px; border-top: 1px solid var(--line); vertical-align: top; }
+    th { background: var(--soft); font-size: .77rem; }
+    td:first-child { font-weight: 700; }
+    .editorial {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .photo-card {
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+    .photo-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; }
+    .photo-card figcaption { padding: 19px 22px; font-size: .79rem; color: var(--muted); }
+    .article-stack { display: grid; gap: 26px; }
+    .article-stack article { padding-bottom: 25px; border-bottom: 1px solid var(--line); }
+    .article-stack article:last-child { padding-bottom: 0; border: 0; }
+    .article-stack h3 { margin-bottom: 14px; }
+    .article-stack p { color: var(--muted); font-size: .94rem; }
+    .article-stack .eyebrow { color: var(--clay); margin-bottom: 10px; }
+    .note {
+      margin-top: 25px;
+      padding: 19px 22px;
+      border-left: 3px solid var(--clay);
+      background: #ede8de;
+      font-size: .86rem;
+    }
+    .budget {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      padding: 40px;
+      background: var(--ink);
+      color: var(--white);
+      border-radius: 20px;
+    }
+    .budget h2 { margin-bottom: 20px; }
+    .budget p { color: #d9e2e1; }
+    .budget-list { list-style: none; padding: 0; margin: 0; }
+    .budget-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding-block: 13px;
+      border-bottom: 1px solid #50656b;
+      font-size: .88rem;
+    }
+    .budget-list span:last-child { color: var(--lime); white-space: nowrap; }
+    .faq-layout { display: grid; grid-template-columns: .65fr 1.35fr; gap: 55px; }
+    .faq-intro p { margin-top: 20px; color: var(--muted); font-size: .93rem; }
+    details { border-bottom: 1px solid var(--line); padding: 20px 0; }
+    details:first-child { padding-top: 0; }
+    summary { cursor: pointer; font-size: 1rem; font-weight: 700; padding-right: 16px; }
+    details p { margin-top: 14px; color: var(--muted); font-size: .93rem; }
+    .closing {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      margin-block: 48px;
+      padding: 32px;
+      border-radius: 18px;
+      background: var(--lime);
+    }
+    .closing h2 { font-size: 1.75rem; margin-bottom: 8px; }
+    .closing p { font-size: .88rem; }
+    footer { padding: 25px 0 35px; border-top: 1px solid var(--line); }
+    .footer-row { display: flex; justify-content: space-between; align-items: start; gap: 35px; }
+    footer p { max-width: 74ch; font-size: .76rem; color: var(--muted); }
+    footer strong { font-size: .9rem; }
+    @media (max-width: 900px) {
+      .categories { grid-template-columns: repeat(5, 1fr); }
+      .categories a { padding: 11px 9px; }
+      .hero { grid-template-columns: 1fr 1fr; }
+      .hero-copy { padding: 30px; }
+      h1 { font-size: 3.2rem; }
+      .guide-card { padding: 21px; }
+      .editorial { gap: 25px; }
+      .faq-layout { grid-template-columns: .8fr 1.2fr; gap: 30px; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(var(--width), calc(100% - 30px)); }
+      .header { padding-block: 18px; }
+      .header-right > a { display: none; }
+      .categories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .categories a { padding: 11px 13px; min-height: 62px; }
+      .category-label { flex-direction: column; gap: 3px; }
+      .category-section { padding-block: 20px 24px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-copy { padding: 29px 25px; }
+      h1 { font-size: clamp(2.7rem, 11vw, 4rem); }
+      .hero-photo img { aspect-ratio: 4 / 3; max-height: 380px; }
+      .answer-strip { grid-template-columns: 1fr; gap: 10px; padding-block: 25px; }
+      .section { padding-block: 44px; }
+      .section-heading, .guide-grid, .editorial, .budget, .faq-layout {
+        grid-template-columns: 1fr;
+      }
+      .section-heading { gap: 18px; }
+      .number { margin-bottom: 18px; }
+      .editorial { gap: 29px; }
+      .photo-card img { aspect-ratio: 4 / 3; }
+      .budget { gap: 22px; padding: 25px; }
+      .faq-layout { gap: 28px; }
+      .closing { flex-direction: column; align-items: start; padding: 25px; }
+      .closing .button { width: 100%; }
+      .footer-row { flex-direction: column; gap: 14px; }
+      th, td { padding: 13px; min-width: 120px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "#pagina",
+        "name": "DgoBuy spreadsheet: guia de tamanhos, QC e compras",
+        "description": "Guia independente em português para comparar categorias de moda, medidas, fotografias QC e custos antes de comprar.",
+        "inLanguage": "pt",
+        "about": {
+          "@type": "Thing",
+          "name": "DgoBuy spreadsheet",
+          "description": "Uma lista organizada de ligações e informações de produtos utilizada como ponto de partida para pesquisa e comparação."
+        },
+        "hasPart": [
+          {"@id": "#artigo-medidas"},
+          {"@id": "#artigo-qc"},
+          {"@id": "#artigo-acessorios"},
+          {"@id": "#perguntas"}
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "#artigo-medidas",
+        "headline": "Tamanhos e medidas DgoBuy: comparar antes de escolher",
+        "description": "Como registar medidas de roupa e calçado e comparar opções com uma peça de referência.",
+        "inLanguage": "pt",
+        "articleSection": "Guia de tamanhos",
+        "mainEntityOfPage": {"@id": "#pagina"}
+      },
+      {
+        "@type": "Article",
+        "@id": "#artigo-qc",
+        "headline": "Fotos QC DgoBuy: o que observar e o que fica por confirmar",
+        "description": "Critérios para analisar fotografias de inspeção sem as confundir com uma certificação de autenticidade.",
+        "inLanguage": "pt",
+        "articleSection": "Inspeção visual",
+        "mainEntityOfPage": {"@id": "#pagina"}
+      },
+      {
+        "@type": "Article",
+        "@id": "#artigo-acessorios",
+        "headline": "DgoBuy finds de acessórios: materiais, ajuste e utilização",
+        "description": "Perguntas úteis sobre materiais, dimensões, fechos e ajuste de acessórios antes de comprar.",
+        "inLanguage": "pt",
+        "articleSection": "Acessórios",
+        "mainEntityOfPage": {"@id": "#pagina"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "#perguntas",
+        "inLanguage": "pt",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O que é uma DgoBuy spreadsheet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "É uma lista organizada de ligações e informações de produtos utilizada como ponto de partida para pesquisa. A expressão não garante que a lista seja oficial, atualizada ou verificada."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como usar uma DgoBuy spreadsheet em português?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Escolha uma categoria, guarde o endereço original do produto e compare medidas, materiais e opções. Antes de pagar, confirme o vendedor, a variante selecionada e o valor final na plataforma onde fizer a encomenda."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "As fotos QC comprovam a autenticidade?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. Fotografias de inspeção ajudam a observar detalhes visíveis, mas não certificam autenticidade, composição, durabilidade ou funcionamento. Para produtos de marca, procure documentação de origem e vendedores autorizados."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como escolher o tamanho de sapatilhas ou roupa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Compare as medidas em centímetros com uma peça que já utiliza. No calçado, confirme a tabela específica do modelo e a medida do pé recomendada. Na roupa, verifique peito, ombros, comprimento, cintura e entreperna conforme a peça."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O preço do produto inclui o envio internacional?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não o presuma. Verifique separadamente produto, transporte local, conversão de moeda, encargos de pagamento, envio internacional e eventuais despesas de importação. Só o resumo aplicável à sua encomenda confirma o que está incluído."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que fazer quando uma ligação de produto deixa de funcionar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Procure pelo nome, referência e vendedor original. Confirme novamente fotografias, variante e medidas; uma página visualmente semelhante pode corresponder a outro produto. Não pague com base numa captura antiga."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Este site é oficial da DgoBuy ou das marcas apresentadas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. Esta página é um guia editorial independente. Os botões gerais encaminham para hipobuyfind.com e os botões de categoria para as secções indicadas desse catálogo. As imagens são referências visuais e não confirmam disponibilidade, autenticidade ou parceria comercial."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/mgrsm/">
+</head>
+<body>
+  <div class="topline">GUIA INDEPENDENTE EM PORTUGUÊS · MODA, MEDIDAS E ESCOLHAS INFORMADAS</div>
+
+  <header class="header wrap">
+    <a class="logo" href="https://www.hipobuyfind.com" aria-label="Visitar hipobuyfind.com">hipobuyfind.com</a>
+    <div class="header-right">
+      <a href="https://www.hipobuyfind.com">Explorar o catálogo ↗</a>
+      <span class="language" aria-label="Idioma: português">PT</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="category-section" aria-labelledby="categorias-titulo">
+      <div class="category-label">
+        <strong id="categorias-titulo">COMECE PELA CATEGORIA</strong>
+        <span class="muted">Ligações diretas para as secções de hipobuyfind.com</span>
+      </div>
+      <nav class="categories" aria-label="Categorias de produtos">
+        <a href="https://hipobuyfind.com/category-911-Shoes.html">
+          <strong lang="en">Shoes ↗</strong><small>Calçado e sapatilhas</small>
+        </a>
+        <a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">
+          <strong lang="en">Hoodies/Sweaters ↗</strong><small>Sweatshirts e camisolas</small>
+        </a>
+        <a href="https://hipobuyfind.com/category-913-T-Shirts.html">
+          <strong lang="en">T-Shirts ↗</strong><small>Corte, tecido e proporção</small>
+        </a>
+        <a href="https://hipobuyfind.com/category-914-Jackets.html">
+          <strong lang="en">Jackets ↗</strong><small>Casacos e sobreposições</small>
+        </a>
+        <a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">
+          <strong lang="en">Pants/Shorts ↗</strong><small>Calças e calções</small>
+        </a>
+        <a href="https://hipobuyfind.com/category-916-Headwear.html">
+          <strong lang="en">Headwear ↗</strong><small>Bonés e chapéus</small>
+        </a>
+        <a href="https://hipobuyfind.com/category-917-Sets.html">
+          <strong lang="en">Sets ↗</strong><small>Conjuntos coordenados</small>
+        </a>
+        <a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">
+          <strong lang="en">Underwear/underpants ↗</strong><small>Roupa interior</small>
+        </a>
+        <a href="https://hipobuyfind.com/category-919-Jersey.html">
+          <strong lang="en">Jersey ↗</strong><small>Camisolas desportivas</small>
+        </a>
+        <a href="https://hipobuyfind.com/category-920-Accessories.html">
+          <strong lang="en">Accessories ↗</strong><small>Detalhes e complementos</small>
+        </a>
+      </nav>
+    </section>
+
+    <section class="hero" aria-labelledby="titulo">
+      <div class="hero-copy">
+        <span class="eyebrow">Caderno de pesquisa / moda com critério</span>
+        <h1 id="titulo">DgoBuy spreadsheet.<br><span>Escolha com contexto.</span></h1>
+        <p>Uma imagem desperta o interesse. As medidas, os materiais e os detalhes ajudam a decidir. Use este guia para transformar uma lista de achados numa seleção que faça sentido para si.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Explorar produtos ↗</a>
+        <small class="destination">Destino: hipobuyfind.com · Esta página não recebe encomendas.</small>
+      </div>
+      <figure class="hero-photo">
+        <img
+          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+          srcset="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=480&amp;q=78 480w, https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=900&amp;q=80 900w"
+          sizes="(max-width: 680px) 100vw, 45vw"
+          width="900"
+          height="900"
+          alt="Sapatilha Nike vermelha com símbolo lateral sobre um fundo vermelho"
+          fetchpriority="high"
+          loading="eager">
+        <figcaption>Nike · Referência visual de calçado. A fotografia não representa uma oferta ou um artigo cuja disponibilidade tenha sido confirmada.</figcaption>
+      </figure>
+    </section>
+
+    <aside class="answer-strip" aria-label="Definição rápida">
+      <strong>Resposta direta</strong>
+      <p>Uma <b>DgoBuy spreadsheet</b> é uma lista organizada de ligações e informações de produtos para pesquisa e comparação. Não substitui a página do vendedor, a confirmação de medidas ou o resumo final da encomenda.</p>
+    </aside>
+
+    <section class="section" aria-labelledby="guia-titulo">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">01 / Guia DgoBuy em português</span>
+          <h2 id="guia-titulo">Uma boa seleção começa por três perguntas.</h2>
+        </div>
+        <p>Antes de procurar mais opções, defina a utilização, o ajuste e as informações que faltam. Uma lista curta e bem documentada é mais fácil de comparar.</p>
+      </div>
+
+      <div class="guide-grid">
+        <article class="guide-card">
+          <span class="number" aria-hidden="true">01</span>
+          <h3>O que precisa realmente?</h3>
+          <p>Para procurar sapatilhas para uso diário, observe o formato, o tipo de sola e o espaço necessário no pé. Ao comparar casacos para sobrepor, deixe margem para a camada que pretende usar por baixo.</p>
+          <p>Em conjuntos de roupa, confirme separadamente as medidas da parte superior e inferior. A mesma etiqueta de tamanho não resolve todos os ajustes.</p>
+        </article>
+        <article class="guide-card">
+          <span class="number" aria-hidden="true">02</span>
+          <h3>As opções são comparáveis?</h3>
+          <p>Compare T-shirts pela largura e pelo comprimento, e não apenas por S, M ou L. Para escolher calças e calções, registe cintura, anca e entreperna com a mesma unidade de medida.</p>
+          <p>Num hoodie de corte largo, distinga o volume do peito do comprimento das mangas. O efeito oversized pode variar bastante entre modelos.</p>
+        </article>
+        <article class="guide-card">
+          <span class="number" aria-hidden="true">03</span>
+          <h3>O anúncio explica o suficiente?</h3>
+          <p>Procure composição do tecido, fotografias de pormenor e identificação da variante. Em camisolas desportivas, confirme medidas, emblemas e eventuais opções de personalização.</p>
+          <p>Na roupa interior, verifique a tabela de tamanhos, o material e as condições aplicáveis a trocas antes de concluir a escolha.</p>
+        </article>
+      </div>
+
+      <div class="compare">
+        <table>
+          <caption>O que registar na sua lista de comparação</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tipo de artigo</th>
+              <th scope="col">Dados úteis</th>
+              <th scope="col">Pergunta antes de comprar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sapatilhas</td>
+              <td>Modelo, variante, tabela em centímetros e largura, quando indicada.</td>
+              <td>A medida refere-se ao pé recomendado ou ao interior do calçado?</td>
+            </tr>
+            <tr>
+              <td>Roupa</td>
+              <td>Peito, ombros, mangas, cintura e comprimento conforme a peça.</td>
+              <td>A tabela apresenta a peça estendida ou medidas do corpo?</td>
+            </tr>
+            <tr>
+              <td>Bonés e chapéus</td>
+              <td>Perímetro, profundidade e tipo de ajuste.</td>
+              <td>A regulação permite o perímetro de que preciso?</td>
+            </tr>
+            <tr>
+              <td>Acessórios</td>
+              <td>Dimensões, material declarado, fecho e pontos de contacto.</td>
+              <td>O anúncio identifica o material ou apenas a cor do acabamento?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="artigos-titulo">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">02 / Leituras práticas</span>
+          <h2 id="artigos-titulo">O detalhe muda a decisão.</h2>
+        </div>
+        <p>Três notas de compra para interpretar anúncios e organizar dúvidas antes de passar da pesquisa à encomenda.</p>
+      </div>
+
+      <div class="editorial">
+        <div>
+          <figure class="photo-card">
+            <img
+              src="https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1791456316/872632_4HBJP_1066_001_100_0000_Light-gg-baseball-hat-with-web.jpg"
+              width="490"
+              height="490"
+              alt="Boné Gucci GG preto com faixa verde e vermelha"
+              loading="lazy"
+              decoding="async">
+            <figcaption>Gucci · Boné GG com faixa Web. Referência visual para observar formato e ajuste; não é uma confirmação de stock no catálogo de destino.</figcaption>
+          </figure>
+          <div class="note">
+            <strong>Marca e origem são questões diferentes.</strong>
+            Um logótipo visível não demonstra autenticidade. Para Nike, Louis Vuitton, Gucci, Hermès ou Dior, procure documentação de origem e canais de venda autorizados.
+          </div>
+        </div>
+
+        <div class="article-stack">
+          <article id="artigo-medidas" aria-labelledby="medidas-titulo">
+            <span class="eyebrow">Guia de tamanhos</span>
+            <h3 id="medidas-titulo">Tamanhos e medidas DgoBuy: comparar antes de escolher</h3>
+            <p>Para converter tamanhos de roupa, comece pela tabela do anúncio específico. Uma conversão genérica entre tamanhos europeus e asiáticos pode ocultar diferenças no corte. Meça uma peça que lhe assenta bem, estendida numa superfície plana, e compare os mesmos pontos.</p>
+            <p>Se precisa de medir o peito de uma T-shirt, registe a largura entre axilas sem esticar o tecido. Ao verificar o comprimento de um casaco, confirme de onde parte a medição indicada pelo vendedor. Para escolher o número de sapatilhas, use a medida do pé recomendada pelo modelo e esclareça qualquer diferença entre centímetros do pé e da palmilha.</p>
+            <p>Ao comparar materiais de sweatshirts, procure a composição declarada e informação sobre o interior. Gramagem, quando indicada, é um dado adicional; não basta para prever conforto, transparência ou durabilidade.</p>
+          </article>
+
+          <article id="artigo-qc" aria-labelledby="qc-titulo">
+            <span class="eyebrow">Inspeção visual</span>
+            <h3 id="qc-titulo">Fotos QC DgoBuy: o que observar e o que fica por confirmar</h3>
+            <p>QC significa controlo de qualidade. Se houver fotografias de inspeção disponíveis para a sua encomenda, confirme primeiro se mostram a cor, o tamanho e a quantidade selecionados. Para verificar costuras e acabamentos, procure imagens nítidas das zonas relevantes, e não apenas uma vista geral.</p>
+            <p>Ao comparar a cor real com fotografias do anúncio, tenha em conta a iluminação e o ecrã. Para analisar o alinhamento de uma estampagem, peça uma fotografia frontal com a peça estendida. Se precisa de confirmar etiquetas e medidas, uma aproximação ou uma fotografia com fita métrica pode ser mais útil do que várias imagens semelhantes.</p>
+            <p>Fotos de encomendas anteriores são referências, não provas sobre a unidade que vai receber. A inspeção visual também não certifica autenticidade nem substitui informação sobre composição ou testes de utilização.</p>
+          </article>
+
+          <article id="artigo-acessorios" aria-labelledby="acessorios-titulo">
+            <span class="eyebrow">DgoBuy finds de acessórios</span>
+            <h3 id="acessorios-titulo">Materiais, ajuste e utilização</h3>
+            <p>Para escolher um boné ajustável, confirme o intervalo de perímetro e o mecanismo de regulação. A profundidade da copa também altera a forma como assenta. Em chapéus sem regulação, a medida exata é especialmente útil.</p>
+            <p>Ao pesquisar joalharia e pequenos acessórios, distinga o material base do revestimento. Para comparar comprimentos de colares e pulseiras, use uma fita métrica e considere a posição do fecho. Se o anúncio não explica a composição, não deduza o material a partir do brilho ou da cor.</p>
+            <p>Na sua lista de achados, guarde a referência, a variante e a data da consulta. Isto ajuda a recuperar o produto quando um link muda e a evitar comparar versões diferentes como se fossem a mesma peça.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="custos-titulo">
+      <div class="budget">
+        <div>
+          <span class="eyebrow">03 / Custos de envio DgoBuy</span>
+          <h2 id="custos-titulo">Compare o total, não apenas a etiqueta.</h2>
+          <p>Para estimar o custo de uma compra internacional, separe o artigo das despesas de transporte e pagamento. Esta página não publica tabelas de preços, taxas de câmbio ou prazos que possam deixar de corresponder à sua encomenda.</p>
+          <p>Ao comparar envio para Portugal ou outro destino, utilize as mesmas dimensões, peso, moeda e serviços incluídos. Confirme também as regras atuais de importação junto das entidades competentes do país de destino.</p>
+        </div>
+        <ul class="budget-list" aria-label="Elementos do custo total">
+          <li><span>Produto e variante escolhida</span><span>Confirmar</span></li>
+          <li><span>Transporte até ao armazém</span><span>Verificar</span></li>
+          <li><span>Conversão de moeda e pagamento</span><span>Comparar</span></li>
+          <li><span>Embalagem e serviços opcionais</span><span>Rever</span></li>
+          <li><span>Envio internacional e seguro, se contratado</span><span>Simular</span></li>
+          <li><span>Despesas de importação aplicáveis</span><span>Consultar</span></li>
+        </ul>
+      </div>
+      <div class="note">
+        <strong>Peso real ou peso volumétrico?</strong>
+        Ao simular o transporte de sapatilhas com caixa ou de roupa volumosa, confirme qual a base de cálculo da transportadora. Retirar embalagem pode alterar o volume, mas também a proteção do conteúdo.
+      </div>
+    </section>
+
+    <section class="section faq-layout" aria-labelledby="faq-titulo">
+      <div class="faq-intro">
+        <span class="eyebrow">04 / Perguntas frequentes</span>
+        <h2 id="faq-titulo">Respostas para avançar com mais clareza.</h2>
+        <p>Definições simples, limites das fotografias e pontos a confirmar antes de utilizar qualquer lista de produtos.</p>
+      </div>
+      <div id="perguntas">
+        <details open>
+          <summary>O que é uma DgoBuy spreadsheet?</summary>
+          <p>É uma lista organizada de ligações e informações de produtos utilizada como ponto de partida para pesquisa. A expressão não garante que a lista seja oficial, atualizada ou verificada.</p>
+        </details>
+        <details>
+          <summary>Como usar uma DgoBuy spreadsheet em português?</summary>
+          <p>Escolha uma categoria, guarde o endereço original do produto e compare medidas, materiais e opções. Antes de pagar, confirme o vendedor, a variante selecionada e o valor final na plataforma onde fizer a encomenda.</p>
+        </details>
+        <details>
+          <summary>As fotos QC comprovam a autenticidade?</summary>
+          <p>Não. Fotografias de inspeção ajudam a observar detalhes visíveis, mas não certificam autenticidade, composição, durabilidade ou funcionamento. Para produtos de marca, procure documentação de origem e vendedores autorizados.</p>
+        </details>
+        <details>
+          <summary>Como escolher o tamanho de sapatilhas ou roupa?</summary>
+          <p>Compare as medidas em centímetros com uma peça que já utiliza. No calçado, confirme a tabela específica do modelo e a medida do pé recomendada. Na roupa, verifique peito, ombros, comprimento, cintura e entreperna conforme a peça.</p>
+        </details>
+        <details>
+          <summary>O preço do produto inclui o envio internacional?</summary>
+          <p>Não o presuma. Verifique separadamente produto, transporte local, conversão de moeda, encargos de pagamento, envio internacional e eventuais despesas de importação. Só o resumo aplicável à sua encomenda confirma o que está incluído.</p>
+        </details>
+        <details>
+          <summary>O que fazer quando uma ligação de produto deixa de funcionar?</summary>
+          <p>Procure pelo nome, referência e vendedor original. Confirme novamente fotografias, variante e medidas; uma página visualmente semelhante pode corresponder a outro produto. Não pague com base numa captura antiga.</p>
+        </details>
+        <details>
+          <summary>Este site é oficial da DgoBuy ou das marcas apresentadas?</summary>
+          <p>Não. Esta página é um guia editorial independente. Os botões gerais encaminham para hipobuyfind.com e os botões de categoria para as secções indicadas desse catálogo. As imagens são referências visuais e não confirmam disponibilidade, autenticidade ou parceria comercial.</p>
+        </details>
+      </div>
+    </section>
+
+    <aside class="closing" aria-label="Continuar a pesquisa">
+      <div>
+        <h2>Escolha uma categoria. Compare os detalhes.</h2>
+        <p>Leve consigo as medidas, as dúvidas e os critérios que realmente interessam.</p>
+      </div>
+      <a class="button" href="https://www.hipobuyfind.com">Continuar no catálogo ↗</a>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>
+        <strong>hipobuyfind.com</strong>
+        <p>Guia editorial independente sobre pesquisa de produtos. Sem afiliação oficial à DgoBuy, Nike, Louis Vuitton, Gucci, Hermès ou Dior. As marcas pertencem aos respetivos titulares.</p>
+      </div>
+      <p>As condições, os materiais e a disponibilidade devem ser confirmados no anúncio de destino. As fotografias desta página têm função ilustrativa.</p>
+    </div>
+  </footer>
+</body>
+</html>
